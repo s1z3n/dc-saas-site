@@ -1,0 +1,203 @@
+header
+	background-color: white
+	position: fixed
+	top: 0px
+	left: 0px
+	right: 0px
+	z-index: 1
+	width: 100%
+	display: flex
+	flex-direction: row
+	border-bottom: solid 1px #eee
+
+	nav
+		width: 100%
+		display: flex
+		justify-content: space-between
+
+		.logo
+
+			+size(150px 65px)
+			background: url(/TriAset/assets/images/favicon.png)
+			background-size: cover
+			margin: 5px 20px
+
+
+		.nav-main
+			display: flex
+			flex-direction: row
+			float: right
+			margin: 15px 30px 5px auto
+			padding: 5px 10px 0px 10px
+
+			.level-1
+				margin: 0px
+				padding: 10px 0px
+				font-size: 15px
+				text-transform: uppercase
+				min-width: 165px
+
+				.nav-item
+					font-weight: 400
+					padding: 10px 0px
+					&:hover
+						border-bottom: 1px solid #999999
+
+
+			#contact
+				border: 1px solid $accent-color
+				padding: 10px 40px
+				color: $accent-color
+				margin-left: 30px
+				&:hover
+					background-color: $accent-color
+					color: white
+
+
+.level-2
+	overflow: hidden
+	font-size: 15px
+	margin: 20px 0px
+	text-transform: none
+	font-weight: 400
+
+
+.level-1
+	ul
+		margin-top: 30px
+		min-height: 180px
+
+		.tiny-line
+
+			content: ""
+			display: block
+			height: 1px
+			border-bottom: 1px solid #999
+			width: 30px
+			opacity: 0.5
+
+
+
+//dropdown hover//
+
+nav ul li:hover > ul
+	display: block
+
+
+nav ul li ul
+	display: none
+
+
+
+//mobile nav//
+
+
+@media (max-width: 950px)
+
+	header
+		nav
+			flex-direction: column
+
+			.logo
+				+size(120px 50px)
+
+			.nav-main
+				display: none
+				flex-direction: column
+				align-items: center
+				margin: 30px auto
+				width: 100%
+
+				.level-1
+					text-align: center
+					margin: 8px
+					.nav-item
+
+						&:hover
+							border-bottom: none
+
+
+					ul
+						margin-top: 10px
+						margin-bottom: 20px
+						min-height: 120px
+
+						.tiny-line
+							margin: 20px auto
+							display: block
+							width: 70px
+
+
+				#contact
+					margin: auto
+
+
+	// hamburger icon with transition //
+
+	.nav-label
+		.mobile-nav-toggle
+			//background-color: pink
+			position: fixed
+			top: 0px
+			right: 0px
+			margin: 10px 25px
+			width: 36px
+			height: 42px
+			//display: none
+			cursor: pointer
+
+			span,
+			span:before,
+			span:after
+				content: ""
+				display: block
+				height: 2px
+				background: #333
+				position: relative
+				transition: all 0.3s ease-in-out
+
+			span:before
+				top: 12px
+
+			span
+				top: 20px
+
+			span:after
+				top: -14px
+
+
+
+
+
+
+.nav-check:checked ~ .nav-label
+	span
+		background: transparent
+	span:before, span:after
+		transform-origin: center
+		transform: rotate(45deg)
+		top: 0px
+	span:after
+		transform: rotate(-45deg)
+		top: -2px
+
+
+.nav-check:checked ~ .nav-main
+	display: flex
+
+.nav-check
+	position: absolute
+	// top: -10em
+	visibility: hidden
+
+
+
+
+
+// positioner is a class to control the max width of items and containers
+.positioner
+	max-width: 1250px
+	margin: 0px auto
+	//width: 100%
+
+	//position: fixed
