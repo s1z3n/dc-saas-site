@@ -1,2 +1,15 @@
 baseurl: /dc-saas-site
 exclude: ['README.md']
+
+
+
+baseurl: /dc-saas-site
+
+permalink: pretty
+
+
+
+
+sass:
+ sass_dir: assets/css
+ style: :nested
