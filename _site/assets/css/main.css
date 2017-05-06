@@ -1,0 +1,129 @@
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold; }
+
+.gigantic {
+  font-size: 110px;
+  line-height: 1.09;
+  letter-spacing: -2px; }
+
+h1 {
+  font-size: 68px;
+  letter-spacing: -1px;
+  margin: 0px; }
+
+h2 {
+  font-size: 42px;
+  line-height: 1.14; }
+
+h3 {
+  font-size: 32px;
+  line-height: 1.5; }
+
+h4 .big {
+  font-size: 22px;
+  line-height: 1.38; }
+
+.small, small {
+  font-size: 10px;
+  line-height: 1.2; }
+
+p {
+  margin: 0 0 25px 0;
+  font-size: 18px; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 10px;
+  height: 0; }
+
+a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  outline: 0; }
+
+a:hover, a:focus {
+  color: rgba(51, 51, 51, 0.7); }
+
+::selection {
+  background: #FFF498; }
+
+::-moz-selection {
+  background: #FFF498; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: #FFF498; }
+
+body {
+  background: #ECEFF1;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%; }
+
+aside {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7); }
+
+.tiny-line {
+  width: 50px;
+  border-bottom: 1px solid #999;
+  padding: 4px 0px; }
+
+button {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 30px auto;
+  padding: 8px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  min-width: 200px;
+  height: 50px;
+  text-align: center; }
+
+.btn-white {
+  border: solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 400; }
+
+.center-justified {
+  text-align: justify; }
+
+ul, li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+.main-header {
+  width: 100%;
+  height: 64px;
+  background-color: white; }
+  .main-header div {
+    padding: 20px 24px; }
+    .main-header div .left-align li {
+      display: block;
+      float: left; }
+    .main-header div .right-align li {
+      display: block;
+      float: right; }

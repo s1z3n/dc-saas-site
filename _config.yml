@@ -2,9 +2,6 @@ baseurl: /dc-saas-site
 exclude: ['README.md']
 
 
-
-baseurl: /dc-saas-site
-
 permalink: pretty
 
 
