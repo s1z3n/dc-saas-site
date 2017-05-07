@@ -1,10 +1,20 @@
 $(document).ready(function() {
 
 
-  $('.menu-btn').click(function(){
-  	$('.navigation').addClass('is-open');
+  $('.menu-icon').click(function(){
+  	$('.side-bar-modal').addClass('is-open');
 
   });
+
+  $('.side-bar-modal').click(function(event){
+   if (event.target == this){
+     $('.side-bar-modal').removeClass('is-open');
+   }
+
+
+  });
+
+});
 
   //  $('.close').click(function(){
   // 	$('.modal-bg').removeClass('is-open');
