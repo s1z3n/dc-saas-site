@@ -102,12 +102,13 @@ ul, li {
   margin-left: 80px; }
 
 .table-wrapper {
-  background-color: lime;
-  margin-right: 82px; }
+  margin-right: 80px; }
 
 .table-head {
   background-color: #FFF;
-  height: 64px; }
+  height: 64px;
+  display: flex;
+  justify-content: space-between; }
 
 .dropbtn {
   padding: 1px 16px;
@@ -115,7 +116,7 @@ ul, li {
   font-weight: 500;
   border: none;
   cursor: pointer;
-  background-color: #fbfbfb;
+  background-color: #fff;
   display: flex;
   align-items: center; }
   .dropbtn:hover, .dropbtn .dropbtn:focus {
@@ -152,13 +153,49 @@ ul, li {
 .show {
   display: block; }
 
+.filter-btn {
+  height: 40px;
+  width: 40px;
+  margin-top: 12px;
+  margin-right: 24px;
+  border-radius: 50%; }
+  .filter-btn:hover {
+    background-color: #ddd; }
+  .filter-btn:active {
+    background-color: #bbb; }
+
 .table-content {
   display: flex; }
-  .table-content .filter-wrapper {
-    min-width: 240px;
-    height: 550px;
-    background-color: lime;
-    float: right; }
+
+.filter-wrapper {
+  min-width: 260px;
+  height: 100vh;
+  float: right;
+  border: 1px solid #eee;
+  background-color: #fff; }
+  .filter-wrapper .filter-header {
+    background-color: white;
+    height: 54px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
+    .filter-wrapper .filter-header .filter-header-test {
+      margin: auto 16px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      .filter-wrapper .filter-header .filter-header-test a {
+        font-size: 14px;
+        font-weight: 500; }
+      .filter-wrapper .filter-header .filter-header-test .clear-filters {
+        font-weight: 400;
+        color: #4285f4;
+        margin-right: 8px; }
+  .filter-wrapper .filters .filters-test {
+    width: 200px;
+    height: 48px;
+    margin: 16px 24px; }
 
 .main-header {
   width: 100%;
@@ -167,7 +204,7 @@ ul, li {
   border: 1px solid #ddd; }
   .main-header .nav-wrapper {
     height: 56px;
-    padding: 4px;
+    padding: 4px 0px;
     align-items: center; }
     .main-header .nav-wrapper .left-align {
       float: left;
@@ -188,7 +225,11 @@ ul, li {
       align-items: center; }
       .main-header .nav-wrapper .right-align .add-deal {
         margin: 0px 16px;
-        padding: 0px 16px; }
+        padding: 0px 16px;
+        color: #4285f4;
+        border: 0px;
+        background-color: #fff;
+        font-size: 16px; }
       .main-header .nav-wrapper .right-align .nav-separator {
         height: 24px;
         border-left: 1px solid grey;
@@ -199,11 +240,11 @@ ul, li {
         margin: 8px 4px; }
       .main-header .nav-wrapper .right-align .user-avatar {
         background-color: grey;
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
         display: block;
         border-radius: 40px;
-        margin: 0px 32px 0px 16px; }
+        margin: 0px 24px 0px 16px; }
 
 .side-bar-modal {
   width: 100%;
@@ -265,7 +306,8 @@ ul, li {
       padding: 0px; }
 
 .material-icons {
-  padding: 8px; }
+  padding: 8px;
+  color: rgba(0, 0, 0, 0.55); }
 
 .table-grid {
   display: flex;
@@ -276,8 +318,7 @@ ul, li {
     flex-direction: row;
     justify-content: space-between;
     height: 56px;
-    background-color: #F2F2F2;
-    border-bottom: 1px solid #eee; }
+    background-color: #F2F2F2; }
     .table-grid .table-header .column {
       font-size: 14px;
       font-weight: 500;
@@ -290,7 +331,7 @@ ul, li {
     background-color: white;
     border-bottom: 1px solid #eee; }
     .table-grid .table-row:hover {
-      background-color: #4990E2;
+      background-color: #4285f4;
       color: #fff; }
 
 .column {

@@ -7,13 +7,12 @@
 
 
 .table-wrapper
-  background-color: lime
-
-  // later change to 80px
-  margin-right: 82px
+  margin-right: 80px
 .table-head
   background-color: #FFF
   height: 64px
+  display: flex
+  justify-content: space-between
 
 .dropbtn
   padding: 1px 16px
@@ -21,7 +20,7 @@
   font-weight: 500
   border: none
   cursor: pointer
-  background-color: #fbfbfb
+  background-color: #fff
   display: flex
   align-items: center
 
@@ -68,15 +67,55 @@
 .show
   display: block
 
+.filter-btn
+  height: 40px
+  width: 40px
+  margin-top: 12px
+  margin-right: 24px
+  border-radius: 50%
+
+  &:hover
+    background-color: #ddd
+  &:active
+    background-color: #bbb
 
 .table-content
   display: flex
 
+.filter-wrapper
+  min-width: 260px
+  height: 100vh
+  float: right
+  border: 1px solid $line-color
+  background-color: #fff
+  // display: none
+
+  .filter-header
+    background-color: white
+    height: 54px
+    border-bottom: 1px solid $line-color
+    align-items: center
+    display: flex
+    justify-content: space-between
+    .filter-header-test
+      margin: auto 16px
+      display: flex
+      justify-content: space-between
+      width: 100%
+      a
+        font-size: 14px
+        font-weight: 500
+      .clear-filters
+        font-weight: 400
+        color: $accent-color
+        margin-right: 8px
 
 
-  .filter-wrapper
-    min-width: 240px
-    height: 550px
-    background-color: lime
-    float: right
-    // display: none
+
+  .filters
+
+    .filters-test
+      width: 200px
+      height: 48px
+      // background-color: #ccc
+      margin: 16px 24px

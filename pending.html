@@ -9,7 +9,6 @@ title: Pending Deals
 <div class="table">
   <div class="table-wrapper">
     <div class="table-head">
-
       <div onclick="myFunction()" class="dropdown">
         <button class="dropbtn">Pending deals<div><i class="material-icons">arrow_drop_down</i></div></button>
         <div id="myDropdown" class="dropdown-content">
@@ -20,12 +19,26 @@ title: Pending Deals
           <a href="#">Canceled Deals</a>
         </div>
       </div>
-
+      <div class="filter-btn">
+        <a class="filter-icon" href="#"><i class="material-icons">filter_list</i></a>
+      </div>
+    </div>
     <div class="table-content">
       {% include table.html %}
       <div class="filter-wrapper">
         <div class="filter-content">
-          test
+          <div class="filter-header">
+            <div class="filter-header-test">
+              <a href="#">Filters (4)</a>
+              <a class="clear-filters" href="#">Clear</a>
+            </div>
+          </div>
+          <div class="filters">
+            <div class="filters-test"></div>
+            <div class="filters-test"></div>
+            <div class="filters-test"></div>
+            <div class="filters-test"></div>
+          </div>
         </div>
       </div>
     </div>
