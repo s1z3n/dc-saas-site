@@ -19,24 +19,42 @@
         display: block
         margin: 8px 16px
       .logo
-        width: 80px
+        // width: 80px
         height: 40px
-        background-color: #ddd
+        // background-color: #ddd
         display: block
         margin-left: 8px
+        line-height: 40px
+        color: rgba(0, 0, 0, 0.7)
+        .dcompas
+          font-weight: bold
+          font-size: 24px
+          color: #444
+        .saas
+          font-weight: 500
+          color: #888
+          font-size: 22px
 
 
     .right-align
       float: right
       display: flex
       align-items: center
-      .add-deal
+      .add-deal-btn
         margin: 0px 16px
-        padding: 0px 16px
+        padding: 8px 16px
         color: $accent-color
-        border: 0px
-        background-color: #fff
+        // border: 0px
+        // background-color: #fff
         font-size: 16px
+        font-weight: 500
+        text-transform: uppercase
+        &:hover
+          cursor: pointer
+        &:active
+          background-color: rgba(66, 133, 244, 0.2)
+
+
       .nav-separator
         height: 24px
         border-left: 1px solid grey
@@ -64,6 +82,8 @@
   opacity: 0
   pointer-events: none
   transition: 400ms ease-in-out
+  z-index: 1
+
 
   &.is-open
     opacity: 1
@@ -80,7 +100,6 @@
 
 
     .side-logo
-      // background-color: pink
       height: 64px
       width: 280px
       display: block

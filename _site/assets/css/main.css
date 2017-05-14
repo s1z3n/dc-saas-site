@@ -3,8 +3,7 @@ body {
   overflow: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: bold; }
+  color: rgba(0, 0, 0, 0.8); }
 
 .gigantic {
   font-size: 110px;
@@ -12,8 +11,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -2px; }
 
 h1 {
-  font-size: 68px;
-  letter-spacing: -1px;
+  font-size: 28px;
   margin: 0px; }
 
 h2 {
@@ -125,7 +123,7 @@ ul, li {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin: 16px 16px; }
+  margin: 16px 8px; }
   .dropdown .material-icons {
     padding: 0px;
     margin: 2px -10px 0px 2px; }
@@ -135,8 +133,7 @@ ul, li {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 260px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; }
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
   .dropdown-content a {
     color: black;
     padding: 12px 20px;
@@ -159,10 +156,16 @@ ul, li {
   margin-top: 12px;
   margin-right: 24px;
   border-radius: 50%; }
-  .filter-btn:hover {
-    background-color: #ddd; }
   .filter-btn:active {
     background-color: #bbb; }
+  .filter-btn.is-active {
+    background-color: #ddd;
+    border: 1px solid transparent;
+    box-shadow: inset 1px 1px 1 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    height: 38px;
+    width: 38px; }
+    .filter-btn.is-active .material-icons {
+      padding: 7px; }
 
 .table-content {
   display: flex; }
@@ -172,7 +175,23 @@ ul, li {
   height: 100vh;
   float: right;
   border: 1px solid #eee;
-  background-color: #fff; }
+  background-color: #fff;
+  display: none; }
+  .filter-wrapper.is-open {
+    display: block; }
+  @media (max-width: 1410px) {
+    .filter-wrapper {
+      position: absolute;
+      right: 0;
+      margin-right: -260px;
+      opacity: 1;
+      pointer-events: none;
+      transition: 400ms ease-in-out; }
+      .filter-wrapper.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-260px, 0px);
+        transition: 400ms ease-in-out; } }
   .filter-wrapper .filter-header {
     background-color: white;
     height: 54px;
@@ -197,6 +216,46 @@ ul, li {
     height: 48px;
     margin: 16px 24px; }
 
+.deal-container {
+  background-color: honeydew;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+  .deal-container .deal-nav-bar {
+    height: 64px;
+    width: 100%;
+    background-color: #0f9d58;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.46); }
+    .deal-container .deal-nav-bar .close-btn .material-icons {
+      color: #fff;
+      margin: 12px 16px;
+      font-size: 28px; }
+    .deal-container .deal-nav-bar .bar-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: #fff;
+      margin: 16px 8px;
+      line-height: 1;
+      text-transform: capitalize; }
+
+.deal-input-container {
+  width: 480px;
+  height: 700px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+  box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75); }
+
 .main-header {
   width: 100%;
   height: 64px;
@@ -214,22 +273,34 @@ ul, li {
         display: block;
         margin: 8px 16px; }
       .main-header .nav-wrapper .left-align .logo {
-        width: 80px;
         height: 40px;
-        background-color: #ddd;
         display: block;
-        margin-left: 8px; }
+        margin-left: 8px;
+        line-height: 40px;
+        color: rgba(0, 0, 0, 0.7); }
+        .main-header .nav-wrapper .left-align .logo .dcompas {
+          font-weight: bold;
+          font-size: 24px;
+          color: #444; }
+        .main-header .nav-wrapper .left-align .logo .saas {
+          font-weight: 500;
+          color: #888;
+          font-size: 22px; }
     .main-header .nav-wrapper .right-align {
       float: right;
       display: flex;
       align-items: center; }
-      .main-header .nav-wrapper .right-align .add-deal {
+      .main-header .nav-wrapper .right-align .add-deal-btn {
         margin: 0px 16px;
-        padding: 0px 16px;
+        padding: 8px 16px;
         color: #4285f4;
-        border: 0px;
-        background-color: #fff;
-        font-size: 16px; }
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase; }
+        .main-header .nav-wrapper .right-align .add-deal-btn:hover {
+          cursor: pointer; }
+        .main-header .nav-wrapper .right-align .add-deal-btn:active {
+          background-color: rgba(66, 133, 244, 0.2); }
       .main-header .nav-wrapper .right-align .nav-separator {
         height: 24px;
         border-left: 1px solid grey;
@@ -254,7 +325,8 @@ ul, li {
   left: 0;
   opacity: 0;
   pointer-events: none;
-  transition: 400ms ease-in-out; }
+  transition: 400ms ease-in-out;
+  z-index: 1; }
   .side-bar-modal.is-open {
     opacity: 1;
     pointer-events: auto; }
@@ -335,11 +407,12 @@ ul, li {
       color: #fff; }
 
 .column {
-  margin: auto;
+  margin: auto 8px;
   font-size: 15px;
   font-weight: 400;
   padding-left: 16px;
-  padding-right: 16px; }
+  padding-right: 16px;
+  align-items: center; }
 
 .col-1 {
   width: 140px; }
@@ -364,3 +437,68 @@ ul, li {
 .col-7 {
   width: 40px;
   text-align: center; }
+
+@media (max-width: 1150px) {
+  .column {
+    margin: auto 8px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 8px;
+    padding-right: 8px;
+    align-items: center; }
+
+  .col-1 {
+    width: 130px; }
+
+  .col-2 {
+    width: 70px; }
+
+  .col-3 {
+    width: 120px; }
+
+  .col-4 {
+    width: 120px; }
+
+  .col-5 {
+    width: 70px;
+    text-align: center; }
+
+  .col-6 {
+    width: 100px;
+    text-align: right; }
+
+  .col-7 {
+    width: 30px;
+    text-align: center; } }
+@media (max-width: 950px) {
+  .column {
+    margin: auto 4px;
+    font-size: 13px;
+    font-weight: 400;
+    padding-left: 4px;
+    padding-right: 4px;
+    align-items: center; }
+
+  .col-1 {
+    width: 115px; }
+
+  .col-2 {
+    width: 70px; }
+
+  .col-3 {
+    width: 80px; }
+
+  .col-4 {
+    width: 90px; }
+
+  .col-5 {
+    width: 20px;
+    text-align: center; }
+
+  .col-6 {
+    width: 80px;
+    text-align: right; }
+
+  .col-7 {
+    width: 30px;
+    text-align: center; } }

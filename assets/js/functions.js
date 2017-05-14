@@ -14,7 +14,27 @@ $(document).ready(function() {
 
   });
 
+  //
+  // $('.filter-icon').click(function(){
+  //   $('.filter-wrapper').addClass('is-open');
+  // });
+
+
+  $('.filter-icon').click(function(){
+    $('.filter-wrapper').toggleClass('is-open');
+
+  });
+
+
+
+  $('.filter-btn').click(function(){
+    $('.filter-btn').toggleClass('is-active');
+
+  });
+
 });
+
+
 
 
 

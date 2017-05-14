@@ -26,11 +26,12 @@
       color: #fff
 
 .column
-  margin: auto
+  margin: auto 8px
   font-size: 15px
   font-weight: 400
   padding-left: 16px
   padding-right: 16px
+  align-items: center
 
 
 .col-1
@@ -50,3 +51,59 @@
 .col-7
   width: 40px
   text-align: center
+
+
+@media (max-width: 1150px)
+  .column
+    margin: auto 8px
+    font-size: 14px
+    font-weight: 400
+    padding-left: 8px
+    padding-right: 8px
+    align-items: center
+
+  .col-1
+    width: 130px
+  .col-2
+    width: 70px
+  .col-3
+    width: 120px
+  .col-4
+    width: 120px
+  .col-5
+    width: 70px
+    text-align: center
+  .col-6
+    width: 100px
+    text-align: right
+  .col-7
+    width: 30px
+    text-align: center
+
+
+@media (max-width: 950px)
+  .column
+    margin: auto 4px
+    font-size: 13px
+    font-weight: 400
+    padding-left: 4px
+    padding-right: 4px
+    align-items: center
+  .col-1
+    width: 115px
+  .col-2
+    width: 70px
+  .col-3
+    width: 80px
+  .col-4
+    width: 90px
+  .col-5
+    width: 20px
+    text-align: center
+  .col-6
+    width: 80px
+    text-align: right
+  .col-7
+    width: 30px
+    text-align: center
+    // margin-right: 10px
