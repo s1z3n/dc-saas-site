@@ -3,34 +3,32 @@ $(document).ready(function() {
 
   $('.menu-icon').click(function(){
   	$('.side-bar-modal').addClass('is-open');
-
   });
 
   $('.side-bar-modal').click(function(event){
    if (event.target == this){
      $('.side-bar-modal').removeClass('is-open');
    }
-
-
   });
 
-  //
-  // $('.filter-icon').click(function(){
-  //   $('.filter-wrapper').addClass('is-open');
-  // });
 
 
   $('.filter-icon').click(function(){
     $('.filter-wrapper').toggleClass('is-open');
-
   });
-
 
 
   $('.filter-btn').click(function(){
     $('.filter-btn').toggleClass('is-active');
-
   });
+
+  // $('.add-deal-btn').click(function(){
+  // 	$('.deal-modal').addClass('is-open');
+  // });
+  //
+  // $('.close-btn').click(function(){
+  // 	$('.deal-modal').removeClass('is-open');
+  // });
 
 });
 

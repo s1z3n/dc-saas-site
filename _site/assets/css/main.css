@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  overflow: hidden; }
+  overflow-x: hidden;
+  background-color: lime; }
 
 h1, h2, h3, h4, h5, h6 {
   color: rgba(0, 0, 0, 0.8); }
@@ -15,12 +16,12 @@ h1 {
   margin: 0px; }
 
 h2 {
-  font-size: 42px;
+  font-size: 18px;
   line-height: 1.14; }
 
 h3 {
-  font-size: 32px;
-  line-height: 1.5; }
+  font-size: 14px;
+  font-weight: 500; }
 
 h4 .big {
   font-size: 22px;
@@ -93,14 +94,8 @@ ul, li {
   padding: 0px;
   list-style-type: none; }
 
-.table {
-  width: 100%;
-  height: 400px;
-  background-color: pink;
-  margin-left: 80px; }
-
-.table-wrapper {
-  margin-right: 80px; }
+.pending-page {
+  padding-left: 80px; }
 
 .table-head {
   background-color: #FFF;
@@ -121,8 +116,6 @@ ul, li {
     background-color: rgba(0, 0, 0, 0.1); }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
   margin: 16px 8px; }
   .dropdown .material-icons {
     padding: 0px;
@@ -169,8 +162,11 @@ ul, li {
 
 .table-content {
   display: flex; }
+  .table-content .table-grid {
+    padding-right: 16px; }
 
 .filter-wrapper {
+  overflow: hidden;
   min-width: 260px;
   height: 100vh;
   float: right;
@@ -181,17 +177,18 @@ ul, li {
     display: block; }
   @media (max-width: 1410px) {
     .filter-wrapper {
+      display: block;
       position: absolute;
       right: 0;
       margin-right: -260px;
-      opacity: 1;
+      opacity: 0;
       pointer-events: none;
-      transition: 400ms ease-in-out; }
+      transform: translate(300px, 0px);
+      transition: all 300ms ease-in-out; }
       .filter-wrapper.is-open {
         opacity: 1;
         pointer-events: auto;
-        transform: translate(-260px, 0px);
-        transition: 400ms ease-in-out; } }
+        transform: translate(-260px, 0px); } }
   .filter-wrapper .filter-header {
     background-color: white;
     height: 54px;
@@ -216,27 +213,27 @@ ul, li {
     height: 48px;
     margin: 16px 24px; }
 
-.deal-container {
-  background-color: honeydew;
+.deal-modal {
+  background-color: #EEE;
   width: 100%;
-  height: 100vh;
   display: flex;
-  justify-content: center; }
-  .deal-container .deal-nav-bar {
+  justify-content: center;
+  animation: 300ms ease-out 0s 1 slideInFromTop; }
+  .deal-modal .deal-nav-bar {
     height: 64px;
     width: 100%;
     background-color: #0f9d58;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     align-items: center;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.46); }
-    .deal-container .deal-nav-bar .close-btn .material-icons {
+    .deal-modal .deal-nav-bar .close-btn .material-icons {
       color: #fff;
       margin: 12px 16px;
       font-size: 28px; }
-    .deal-container .deal-nav-bar .bar-title {
+    .deal-modal .deal-nav-bar .bar-title {
       font-size: 24px;
       font-weight: 500;
       color: #fff;
@@ -245,16 +242,59 @@ ul, li {
       text-transform: capitalize; }
 
 .deal-input-container {
-  width: 480px;
-  height: 700px;
-  background-color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 65px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 24px;
+  width: 480px;
+  height: 750px;
+  position: absolute;
+  background-color: #fff;
+  top: 65px;
   box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75); }
+  .deal-input-container .deal-input-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .deal-input-container .deal-input-head .deal-title {
+      font-size: 18px;
+      padding: 8px 24px;
+      font-weight: 500; }
+
+.deal-input-body .deal-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 24px; }
+  .deal-input-body .deal-row .icon-circle {
+    background-color: #0f9d58;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; }
+    .deal-input-body .deal-row .icon-circle i {
+      padding: 4px;
+      font-size: 16px;
+      color: #fff; }
+  .deal-input-body .deal-row h3 {
+    color: #0f9d58;
+    padding-left: 16px; }
+
+.deal-col {
+  padding: 8px 40px; }
+
+.input-text {
+  font-size: 14px;
+  padding-bottom: 4px; }
+
+.select-form {
+  width: 360px;
+  height: 32px;
+  margin-top: 4px;
+  font-size: 15px; }
 
 .main-header {
   width: 100%;
@@ -390,7 +430,7 @@ ul, li {
     flex-direction: row;
     justify-content: space-between;
     height: 56px;
-    background-color: #F2F2F2; }
+    background-color: #f9f9f9; }
     .table-grid .table-header .column {
       font-size: 14px;
       font-weight: 500;

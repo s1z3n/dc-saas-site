@@ -1,16 +1,24 @@
-.deal-container
-  background-color: honeydew
+
+//
+// @keyframes slideInFromTop
+//   0%
+//     transform: translate(0,1000px)
+//   100%
+//     transform: translate(0, 0px)
+
+.deal-modal
+  background-color: #EEE
   width: 100%
-  height: 100vh
   display: flex
   justify-content: center
-  // align-items: center
+  animation: 300ms ease-out 0s 1 slideInFromTop
+
   .deal-nav-bar
     height: 64px
     width: 100%
     background-color: $green-color
     z-index: 2
-    position: absolute
+    position: fixed
     top: 0
     display: flex
     align-items: center
@@ -28,15 +36,3 @@
       margin: 16px 8px
       line-height: 1
       text-transform: capitalize
-
-.deal-input-container
-  width: 480px
-  height: 700px
-  background-color: #fff
-  display: flex
-  justify-content: center
-  align-items: center
-  margin-top: 65px
-  box-shadow: 1px 1px 18px -4px rgba(0,0,0,0.75)
-  -webkit-box-shadow: 1px 1px 18px -4px rgba(0,0,0,0.75)
-  -moz-box-shadow: 1px 1px 18px -4px rgba(0,0,0,0.75)

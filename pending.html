@@ -6,7 +6,7 @@ title: Pending Deals
 {% include main-header.html %}
 {% include side-menu.html %}
 
-<div class="table">
+<div class="pending-page">
   <div class="table-wrapper">
     <div class="table-head">
       <div onclick="myFunction()" class="dropdown">
@@ -22,25 +22,26 @@ title: Pending Deals
       <div class="filter-btn">
         <a class="filter-icon" href="#"><i class="material-icons">filter_list</i></a>
       </div>
+
+    </div>
+    <div class="filter-wrapper">
+      <div class="filter-content">
+        <div class="filter-header">
+          <div class="filter-header-test">
+            <a href="#">Filters (4)</a>
+            <a class="clear-filters" href="#">Clear</a>
+          </div>
+        </div>
+        <div class="filters">
+          <div class="filters-test"></div>
+          <div class="filters-test"></div>
+          <div class="filters-test"></div>
+          <div class="filters-test"></div>
+        </div>
+      </div>
     </div>
     <div class="table-content">
       {% include table.html %}
-      <div class="filter-wrapper">
-        <div class="filter-content">
-          <div class="filter-header">
-            <div class="filter-header-test">
-              <a href="#">Filters (4)</a>
-              <a class="clear-filters" href="#">Clear</a>
-            </div>
-          </div>
-          <div class="filters">
-            <div class="filters-test"></div>
-            <div class="filters-test"></div>
-            <div class="filters-test"></div>
-            <div class="filters-test"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 

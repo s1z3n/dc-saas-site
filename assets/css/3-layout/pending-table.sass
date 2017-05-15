@@ -1,18 +1,15 @@
-.table
-  width: 100%
-  height: 400px
-  background-color: pink
-  margin-left: 80px
-
+.pending-page
+  padding-left: 80px
 
 
 .table-wrapper
-  margin-right: 80px
+
 .table-head
   background-color: #FFF
   height: 64px
   display: flex
   justify-content: space-between
+
 
 .dropbtn
   padding: 1px 16px
@@ -29,8 +26,6 @@
     background-color: rgba(0,0,0,0.1)
 
 .dropdown
-  position: relative
-  display: inline-block
   margin: 16px 8px
   .material-icons
     padding: 0px
@@ -91,7 +86,12 @@
 .table-content
   display: flex
 
+  .table-grid
+    padding-right: 16px
+
+
 .filter-wrapper
+  overflow: hidden
   min-width: 260px
   height: 100vh
   float: right
@@ -100,21 +100,20 @@
   display: none
   &.is-open
     display: block
+
   @media (max-width: 1410px)
+    display: block
     position: absolute
     right: 0
     margin-right: -260px
-    opacity: 1
+    opacity: 0
     pointer-events: none
-    transition: 400ms ease-in-out
+    transform: translate(300px, 0px)
+    transition: all 300ms ease-in-out
     &.is-open
       opacity: 1
       pointer-events: auto
       transform: translate(-260px, 0px)
-      transition:  400ms ease-in-out
-
-
-
 
   .filter-header
     background-color: white
