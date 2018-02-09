@@ -57,11 +57,43 @@ window.onclick = function(event) {
   }
 }
 
-  //  $('.close').click(function(){
-  // 	$('.modal-bg').removeClass('is-open');
-  // });
-  //
-  //  $('.navigation').click(function(event){
-  //  	if (event.target == this){
-  //  		$('.navigation').removeClass('is-open');
-  //  	}
+
+
+// notification modal
+  $('.notifications-icon').click(function(){
+      $('.notif-modal-bg').addClass('is-open');
+      // return false
+    });
+
+     $('.notif-close').click(function(){
+      $('.notif-close').addClass('is-close');
+
+    });
+
+    $('.notif-close').click(function(){
+     $('.notif-clear').addClass('is-open');
+
+    });
+
+    $('.notif-clear').click(function(){
+     $('.notify').addClass('is-close');
+
+   });
+
+   $('.notif-clear').click(function(){
+    $('.notify-empty').addClass('is-open');
+
+  });
+
+     $('.notif-modal-bg').click(function(event){
+      if (event.target == this){
+        $('.notif-modal-bg').removeClass('is-open');
+      }
+
+
+    });
+
+    // $('.setting-icon').click(function(){
+    //  $('.notif-setting').addClass('is-open');
+    //
+    // });
