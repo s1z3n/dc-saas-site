@@ -706,6 +706,85 @@ select {
   .widget5 {
     grid-column: 1/2;
     order: 6; } }
+.setting-header {
+  height: 64px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75); }
+  .setting-header .close-btn {
+    padding: 8px;
+    margin-left: 16px;
+    margin-right: 12px; }
+    .setting-header .close-btn i {
+      font-size: 28px; }
+  .setting-header .bar-title {
+    font-size: 24px;
+    margin: 16px 0;
+    font-weight: 500; }
+
+.setting-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box; }
+  .setting-wrapper .set-left-col, .setting-wrapper .set-right-col {
+    width: 50%;
+    max-width: 480px;
+    background-color: #fff;
+    margin: 56px 12px;
+    padding-bottom: 16px;
+    box-shadow: 0 4px 8px 0 transparent, 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; }
+
+.settings-head {
+  background-color: #fff;
+  height: 112px;
+  padding: 24px 24px;
+  border-bottom: 1px solid #ddd;
+  line-height: 20px; }
+  .settings-head h2 {
+    font-size: 20px;
+    font-weight: 500; }
+  .settings-head p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500; }
+
+.settings-link {
+  height: 88px;
+  padding: 4px 24px;
+  border-bottom: 1px solid #ddd; }
+  .settings-link:hover {
+    background-color: #eee; }
+  .settings-link:last-child {
+    border-bottom: none; }
+  .settings-link a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .settings-link a .left-text h3 {
+      font-size: 16px;
+      margin: 12px 0 8px 0; }
+    .settings-link a .left-text p {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6);
+      margin-bottom: 8px;
+      max-width: 340px; }
+    .settings-link a .right-arrow i {
+      margin-top: 12px; }
+
+@media (max-width: 900px) {
+  .setting-wrapper {
+    flex-direction: column; }
+    .setting-wrapper .set-left-col, .setting-wrapper .set-right-col {
+      width: 100%;
+      max-width: 480px;
+      margin: 16px auto; } }
 .main-header {
   width: 100%;
   height: 64px;
