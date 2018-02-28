@@ -97,3 +97,32 @@ window.onclick = function(event) {
     //  $('.notif-setting').addClass('is-open');
     //
     // });
+
+
+    // $('.more-btn').click(function(){
+    //     $('.hidden-btn').addClass('is-open');
+    //     // return false
+    //   });
+    //
+    //
+    //   $('body').click(function(event){
+    //    if (event.target == this){
+    //      $('.hidden-btn').removeClass('is-open');
+    //    }
+    //
+    //
+    //  });
+
+
+
+
+// setting modals
+
+$('#bentity').click(function(){
+  $('.bentity-modal').addClass('is-open');
+
+});
+
+ $('.back-btn').click(function(){
+  $('.bentity-modal').removeClass('is-open');
+});
