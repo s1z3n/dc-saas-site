@@ -1,11 +1,71 @@
-<div class="secondary-header"></div>
-<div class="content-wrapper">
-  <a class="back-btn" href="#" onClick="history.go(-1);return true;">
-    <i class="material-icons" style="color:#fff;">arrow_back</i>
-  </a>
-  <h3>{% if page.title %}{{page.title}}{% endif %}</h3>
-</div>
+<div class="system-config-modal">
+  <div class="secondary-header">
+    <div class="content-wrapper">
+      <a class="back-btn" href="">
+        <i class="material-icons" style="color:#fff;">arrow_back</i>
+      </a>
+      <h3>System Configurations</h3>
+    </div>
+  </div>
 
-<div class="system-config">
+  <div class="setting-card-s">
+    <div class="settings-head">
+      <h2>System Configuration</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan</p>
+    </div>
+    <div class="setting-rows">
+      <h6>General</h6>
+      <ul>
+        <li>Product Concept
+          <form>
+            <select id="product" name="p-type">
+              <option value="ci">Conventional & Islamic</option>
+              <option value="c">Conventional</option>
+              <option value="i">Islamic</option>
+            </select>
+          </form>
+        </li>
+        <li>Deal Approval Option
+          <label class="switch">
+            <label class="label">Not Required</label>
+            <input type="checkbox" id="app-check" onclick="showHideInfo()">
+            <span class="slider round"></span>
+          </label>
+          <div class="hide" id="app-hide">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+          </div>
+        </li>
+        <li>Auto Settlement Option
+          <label class="switch">
+            <label class="label">Off</label>
+            <input type="checkbox" id="set-check" onclick="showHideInfo()">
+            <span class="slider round"></span>
+          </label>
+          <div class="hide" id="set-hide">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+          </div>
+        </li>
+        <li>Facility
+          <label class="switch">
+            <label class="label">Not Required</label>
+            <!-- <label class="label">Not Required</label> -->
+            <input id="facility-check" type="checkbox" onclick="showHideInfo()">
+            <span class="slider round"></span>
+          </label>
+          <div class="hide" id="fac-hide">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+          </div>
+        </li>
+        <li>GST
+          <label class="switch">
+            <label class="label">No</label>
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 
 </div>

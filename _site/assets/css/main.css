@@ -127,7 +127,8 @@ ul, li {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 260px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
   .dropdown-content a {
     color: black;
     padding: 12px 20px;
@@ -819,7 +820,7 @@ select {
     color: #fff;
     font-size: 20px; }
 
-.setting-card {
+.setting-card, .setting-card-s {
   width: 96%;
   max-width: 720px;
   background-color: #fff;
@@ -884,7 +885,7 @@ select {
   .hidden-btn .edit-btn {
     background-color: #6F6F6F; }
 
-.bentity-modal {
+.bentity-modal, .system-config-modal {
   position: absolute;
   top: 64px;
   min-height: 100vh;
@@ -894,9 +895,50 @@ select {
   flex-wrap: wrap;
   opacity: 0;
   pointer-events: none; }
-  .bentity-modal.is-open {
+  .bentity-modal.is-open, .system-config-modal.is-open {
     opacity: 1;
     pointer-events: auto; }
+
+.setting-card-s {
+  max-width: 520px; }
+
+.setting-rows {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto; }
+  .setting-rows h6 {
+    background-color: #eee;
+    margin: 0;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: -1px; }
+  .setting-rows li {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 16px 0;
+    height: auto;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 2px;
+    align-items: center;
+    border-bottom: 1px solid #ddd; }
+    .setting-rows li:last-child {
+      border-bottom: none; }
+
+.hide {
+  display: none;
+  margin-top: 16px; }
+  .hide p {
+    font-size: 13px;
+    color: #777; }
 
 .main-header {
   width: 100%;
@@ -1147,7 +1189,7 @@ select {
 
 .notif-modal-bg .notif-setting {
   animation: slide-left 0.3s ease-in-out;
-  display: none; }
+  display: block; }
 
 .notif-setting-wrapper {
   padding: 0 16px 24px 16px; }
@@ -1169,8 +1211,20 @@ select {
 .switch {
   position: relative;
   display: inline-block;
-  width: 48px;
+  width: 46px;
   height: 24px; }
+  .switch .label {
+    width: 150px;
+    text-align: right;
+    position: relative;
+    right: 160px;
+    display: inline-block;
+    font-size: 15px;
+    top: 2px;
+    color: #444; }
+  .switch p {
+    margin-left: -100px;
+    width: 100px; }
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -1186,13 +1240,16 @@ select {
   bottom: 0;
   background-color: #ccc;
   -webkit-transition: 0.4s;
-  transition: 0.4s; }
+  transition: 0.4s;
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(133, 133, 133, 0.45);
+  -moz-box-shadow: 0px 0px 6px -1px rgba(133, 133, 133, 0.45);
+  box-shadow: 0px 0px 6px -1px rgba(133, 133, 133, 0.45); }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 23px;
-  width: 23px;
+  height: 22px;
+  width: 22px;
   left: 1px;
   bottom: 1px;
   background-color: white;
@@ -1206,9 +1263,9 @@ input:focus + .slider {
   box-shadow: 0 0 1px #2196F3; }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(23px);
-  -ms-transform: translateX(23px);
-  transform: translateX(23px); }
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px); }
 
 /* Rounded sliders */
 .slider.round {

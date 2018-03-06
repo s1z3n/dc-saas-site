@@ -134,7 +134,7 @@
 // end of secondary header
 
 
-.setting-card
+.setting-card, .setting-card-s
   width: 96%
   max-width: 720px
   background-color: #fff
@@ -203,7 +203,7 @@
     background-color: #6F6F6F
 
 
-.bentity-modal
+.bentity-modal, .system-config-modal
   position: absolute
   top: 64px
   min-height: 100vh
@@ -216,3 +216,50 @@
   &.is-open
     opacity: 1
     pointer-events: auto
+
+
+.setting-card-s
+  max-width: 520px
+
+
+.setting-rows
+  display: flex
+  flex-direction: column
+  width: 100%
+  margin: auto
+  h6
+    background-color: #eee
+    margin: 0
+    width: 100%
+    line-height: 40px
+    padding-left: 24px
+    font-size: 16px
+    font-weight: 500
+    box-sizing: border-box
+    margin-bottom: 16px
+    color: rgba(0, 0, 0, .6)
+    margin-top: -1px
+  li
+    display: flex
+    flex-wrap: wrap
+    width: 90%
+    // min-height: 56px
+    padding: 16px 0
+    height: auto
+    margin: auto
+    justify-content: space-between
+    margin-top: 2px
+    align-items: center
+    border-bottom: 1px solid #ddd
+    &:last-child
+      border-bottom: none
+
+.hide
+  display: none
+  margin-top: 16px
+  p
+    font-size: 13px
+    color: #777
+
+// #fac-hide
+//   display: none

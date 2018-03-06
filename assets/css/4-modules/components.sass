@@ -142,7 +142,7 @@
 .notif-modal-bg
   .notif-setting
     animation: slide-left .3s ease-in-out
-    display: none
+    display: block
 
 
 .notif-setting-wrapper
@@ -172,13 +172,27 @@
 .switch
   position: relative
   display: inline-block
-  width: 48px
+  width: 46px
   height: 24px
+  .label
+    width: 150px
+    text-align: right
+    // background-color: pink
+    position: relative
+    right: 160px
+    display: inline-block
+    font-size: 15px
+    top: 2px
+    color: #444
 
+  p
+    margin-left: -100px
+    width: 100px
 
 /* Hide default HTML checkbox */
 .switch input
   display: none
+
 
 /* The slider */
 .slider
@@ -191,13 +205,15 @@
   background-color: #ccc
   -webkit-transition: .4s
   transition: .4s
-
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(133,133,133,0.45)
+  -moz-box-shadow: 0px 0px 6px -1px rgba(133,133,133,0.45)
+  box-shadow: 0px 0px 6px -1px rgba(133,133,133,0.45)
 
 .slider:before
   position: absolute
   content: ""
-  height: 23px
-  width: 23px
+  height: 22px
+  width: 22px
   left: 1px
   bottom: 1px
   background-color: white
@@ -209,14 +225,17 @@ input:checked + .slider
   background-color: #2196F3
 
 
+
 input:focus + .slider
   box-shadow: 0 0 1px #2196F3
 
 
 input:checked + .slider:before
-  -webkit-transform: translateX(23px)
-  -ms-transform: translateX(23px)
-  transform: translateX(23px)
+  -webkit-transform: translateX(22px)
+  -ms-transform: translateX(22px)
+  transform: translateX(22px)
+
+
 
 
 /* Rounded sliders */

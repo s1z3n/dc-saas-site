@@ -93,10 +93,10 @@ window.onclick = function(event) {
 
     });
 
-    // $('.setting-icon').click(function(){
-    //  $('.notif-setting').addClass('is-open');
-    //
-    // });
+    $('.setting-icon').click(function(){
+     $('.notif-setting').addClass('is-open');
+
+    });
 
 
     // $('.more-btn').click(function(){
@@ -126,3 +126,43 @@ $('#bentity').click(function(){
  $('.back-btn').click(function(){
   $('.bentity-modal').removeClass('is-open');
 });
+
+
+
+$('#system-config').click(function(){
+  $('.system-config-modal').addClass('is-open');
+
+});
+
+ $('.back-btn').click(function(){
+  $('.system-config-modal').removeClass('is-open');
+});
+
+
+
+
+
+
+
+
+function showHideInfo() {
+  if(document.getElementById('app-check').checked){
+    document.getElementById('app-hide').style.display='block';
+
+  }  else {document.getElementById('app-hide').style.display='none';
+
+  }
+  if(document.getElementById('set-check').checked){
+    document.getElementById('set-hide').style.display='block';
+
+  }  else {document.getElementById('set-hide').style.display='none';
+
+  }
+  if(document.getElementById('facility-check').checked){
+    document.getElementById('fac-hide').style.display='block';
+
+  }  else {document.getElementById('fac-hide').style.display='none';
+
+  }
+
+}
