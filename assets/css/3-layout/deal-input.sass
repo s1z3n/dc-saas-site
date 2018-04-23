@@ -3,35 +3,32 @@
   flex-direction: column
   align-items: flex-start
   justify-content: flex-start
-  padding: 24px
-  width: 480px
-  height: 750px
+  max-width: 480px
   position: absolute
   background-color: #fff
   top: 65px
   box-shadow: 1px 1px 18px -4px rgba(0,0,0,0.75)
   -webkit-box-shadow: 1px 1px 18px -4px rgba(0,0,0,0.75)
   -moz-box-shadow: 1px 1px 18px -4px rgba(0,0,0,0.75)
-  .deal-input-head
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: space-between
-    .deal-title
-      font-size: 18px
-      padding: 4px 24px
-      font-weight: 500
+.deal-input-head
+  display: flex
+  flex-direction: row
+  align-items: center
+  width: 100%
+  height: 64px
+  border-bottom: 1px solid #eee
+  .deal-title
+    font-size: 18px
+    padding-left: 40px
+    font-weight: 500
 
 .deal-input-body
-  width: 90%
-  padding-left: 24px
-  padding-right: 24px
-  // background-color: pink
+  padding: 16px 65px 24px 40px
   .deal-row
     display: flex
     flex-direction: row
     align-items: center
-    padding: 4px 0px
+    padding: 2px 0px
 
     .icon-circle
       background-color: $green-color
@@ -42,53 +39,106 @@
         padding: 4px
         font-size: 16px
         color: #fff
+
     h3
       color: $green-color
       padding-left: 16px
 
+    .deal-link
+      font-size: 14px
+      padding: 8px 16px
+      font-weight: 500
+      color: $link-color
+      display: flex
+      height: 20px
+      p
+        font-weight: 400
+        font-size: 13px
+      &:hover
+        color: $green-color
 
-.input-lable
-  font-size: 14px
-  margin-bottom: 4px
-  font-weight: 500
-  color: $link-color
+.form-elements
+  width: 90%
+  margin-left: 40px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
-.select-form
-  // width: 360px
-  height: 32px
-  margin-top: 4px
-  font-size: 15px
 
 .input
-  // background-color: lime
+  font-size: 14px
+  margin-bottom: 20px
+  font-weight: 500
+  color: $link-color
   display: flex
-  width: 100%
-  margin: 4px
   flex-direction: column
+  justify-content: space-between
 
-
-
-.input-row
-  width: 90%
-  display: flex
-  padding: 4px 16px 4px 40px
-  // flex-wrap: wrap
-.col-100
+.input-100
   width: 100%
-.col-70
-  width: 70%
-.col-30
-  width: 30%
-.col-50
-  width: 50%
 
-select
+.input-60
+  width: 64%
+
+.input-30
+  width: 34%
+
+.input-50
+  width: 49%
+
+.combobox
   width: 100%
   height: 32px
   font-size: 15px
   margin-top: 4px
+
 .text-box
-  width: 97%
-  height: 26px
+  height: 24px
   font-size: 15px
   margin-top: 4px
+
+.remarks
+  height: 100px
+  font-size: 14px
+  line-height: 20px
+  margin-top: 4px
+
+.deal-action-container
+  width: 100%
+  box-sizing: border-box
+  height: 72px
+  border-top: 1px solid #eee
+  padding: 8px 24px
+  display: flex
+  align-items: center
+
+
+
+// modals
+
+.add-info-modal
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .5)
+  z-index: 2
+  position: absolute
+  align-items: flex-start
+  justify-content: center
+  display: none
+
+.additional-info-container
+  width: 400px
+  background-color: #fff
+  margin: 65px
+
+
+.deal-modal-form
+  width: 80%
+  margin: 24px auto
+
+// .is-close
+//   display: none
+
+
+.is-open
+  display: flex

@@ -166,3 +166,21 @@ function showHideInfo() {
   }
 
 }
+
+
+
+
+
+
+$('#dp-add-info').click(function(){
+  $('.add-info-modal').addClass('is-open');
+
+});
+
+ $('.add-info-modal').click(function(event){
+  if (event.target == this){
+    $('.add-info-modal').removeClass('is-open');
+  }
+
+
+});
