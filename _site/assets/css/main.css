@@ -82,7 +82,7 @@ aside {
   color: rgba(0, 0, 0, 0.7); }
 
 button {
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   padding: 4px 8px;
   height: 32px;
@@ -213,11 +213,94 @@ ul, li {
     height: 48px;
     margin: 16px 24px; }
 
+.pen-dialog {
+  width: 440px;
+  margin: 4% 1%;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.deal-detail-head {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-right: 16px;
+  margin-left: 40px; }
+
+.deal-detail-title {
+  font-size: 18px;
+  font-weight: 500; }
+
+.deal-detail-table {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  padding: 24px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin: 16px 0;
+  padding-right: 24px;
+  padding-left: 56px; }
+  .deal-detail-table .cell {
+    padding: 4px;
+    font-size: 15px; }
+
+.link-modals-container {
+  border-top: 1px solid #ddd;
+  margin-left: 40px; }
+  .link-modals-container .info-link {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-left: 40px; }
+    .link-modals-container .info-link:last-child {
+      border-bottom: none;
+      margin-bottom: 8px; }
+    .link-modals-container .info-link i {
+      margin-left: -48px;
+      font-size: 22px; }
+    .link-modals-container .info-link .add-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 42px; }
+      .link-modals-container .info-link .add-info .text-link {
+        color: rgba(0, 0, 0, 0.8); }
+      .link-modals-container .info-link .add-info a {
+        padding-right: 32px;
+        font-size: 15px;
+        color: #4285f4; }
+
+.act-btn-container {
+  width: 100%;
+  height: 72px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 8px 24px;
+  box-sizing: border-box; }
+  .act-btn-container .primary-btn-blue {
+    background-color: #4285f4; }
+    .act-btn-container .primary-btn-blue:hover {
+      background-color: #2f79f3; }
+  .act-btn-container .btn {
+    height: 40px;
+    padding: 0 16px;
+    font-weight: 500;
+    font-size: 15px;
+    border: none; }
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translate(0, 1000px); }
+  100% {
+    transform: translate(0, 0px); } }
 .deal-modal {
   background-color: #EEE;
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  animation: 300ms ease-out 0s 1 slideInFromTop; }
   .deal-modal .deal-nav-bar {
     height: 64px;
     width: 100%;

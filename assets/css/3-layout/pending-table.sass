@@ -1,10 +1,6 @@
 .pending-page
   padding-left: 80px
 
-
-.table-wrapper
-
-
 .table-head
   background-color: #FFF
   height: 64px
@@ -149,3 +145,106 @@
       height: 48px
       // background-color: #ccc
       margin: 16px 24px
+
+
+
+
+// Pending dialog box
+
+// .pen-dialog-modal
+//   width: 100%
+//   height: 100vh
+//   background-color: rgba(0,0,0,.4)
+//   top: 0
+//   position: absolute
+//   display: flex
+//   justify-content: center
+
+
+.pen-dialog
+  width: 440px
+  margin: 4% 1%
+  background-color: #fff
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+
+
+
+.deal-detail-head
+  // width: 100%
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-bottom: 1px solid #ddd
+  padding-right: 16px
+  // box-sizing: border-box
+  margin-left: 40px
+  // background-color: pink
+.deal-detail-title
+  font-size: 18px
+  font-weight: 500
+
+.deal-detail-table
+  // background-color: pink
+  display: grid
+  grid-template-columns: 1fr 1.4fr
+  padding: 24px
+  grid-column-gap: 16px
+  grid-row-gap: 16px
+  margin: 16px 0
+  padding-right: 24px
+  padding-left: 56px
+  .cell
+    // background-color: skyblue
+    padding: 4px
+    font-size: 15px
+
+
+
+.link-modals-container
+  // background-color: lime
+  border-top: 1px solid #ddd
+  margin-left: 40px
+  .info-link
+    display: flex
+    align-items: center
+    border-bottom: 1px solid #ddd
+    margin-left: 40px
+    &:last-child
+      border-bottom: none
+      margin-bottom: 8px
+    i
+      margin-left: -48px
+      font-size: 22px
+    .add-info
+      display: flex
+      align-items: center
+      // background-color: skyblue
+      justify-content: space-between
+      width: 100%
+      height: 42px
+      .text-link
+        color: rgba(0, 0, 0, 0.8)
+      a
+        padding-right: 32px
+        font-size: 15px
+        color: $accent-color
+
+.act-btn-container
+  width: 100%
+  height: 72px
+  background-color: #fff
+  border-top: 1px solid #ddd
+  padding: 8px 24px
+  box-sizing: border-box
+  .primary-btn-blue
+    background-color: $accent-color
+    &:hover
+      background-color: darken($accent-color, 4%)
+  .btn
+    height: 40px
+    padding: 0 16px
+    font-weight: 500
+    font-size: 15px
+    border: none

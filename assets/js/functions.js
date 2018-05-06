@@ -177,10 +177,9 @@ $('#dp-add-info').click(function(){
 
 });
 
-//  $('.add-info-modal').click(function(event){
-//   if (event.target == this){
-//     $('.add-info-modal').removeClass('test-open');
-//   }
-//
-//
-// });
+ $('.add-info-modal').click(function(event){
+  if (event.target == this){
+    $('.add-info-modal').removeClass('test-open');
+  }
+
+});
