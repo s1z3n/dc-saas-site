@@ -213,6 +213,18 @@ ul, li {
     height: 48px;
     margin: 16px 24px; }
 
+@media (max-width: 880px) {
+  .pending-page {
+    padding-left: 0px; } }
+.pen-dialog-modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center; }
+
 .pen-dialog {
   width: 440px;
   margin: 4% 1%;
@@ -269,7 +281,7 @@ ul, li {
         color: rgba(0, 0, 0, 0.8); }
       .link-modals-container .info-link .add-info a {
         padding-right: 32px;
-        font-size: 15px;
+        font-size: 14px;
         color: #4285f4; }
 
 .act-btn-container {
@@ -289,6 +301,23 @@ ul, li {
     font-weight: 500;
     font-size: 15px;
     border: none; }
+
+.test2 {
+  top: 100px;
+  display: flex; }
+  .test2 .notif-box2 {
+    width: 300px;
+    height: auto;
+    max-height: 480px;
+    min-height: 300px;
+    background-color: #fff;
+    position: relative;
+    right: -50px;
+    top: 60px;
+    z-index: 2;
+    border: 0.5px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 1px; }
 
 @keyframes slideInFromTop {
   0% {
@@ -1088,37 +1117,55 @@ ul, li {
           font-weight: 500;
           color: #888;
           font-size: 22px; }
-    .main-header .nav-wrapper .right-align {
-      float: right;
-      display: flex;
-      align-items: center; }
-      .main-header .nav-wrapper .right-align .add-deal-btn {
-        margin: 0px 16px;
-        padding: 8px 16px;
-        color: #4285f4;
-        font-size: 16px;
-        font-weight: 500;
-        text-transform: uppercase; }
-        .main-header .nav-wrapper .right-align .add-deal-btn:hover {
-          cursor: pointer; }
-        .main-header .nav-wrapper .right-align .add-deal-btn:active {
-          background-color: rgba(66, 133, 244, 0.2); }
-      .main-header .nav-wrapper .right-align .nav-separator {
-        height: 24px;
-        border-left: 1px solid grey;
-        margin: 0px 8px 0px 8px; }
-      .main-header .nav-wrapper .right-align .calendar-icon {
-        margin: 8px 4px; }
-      .main-header .nav-wrapper .right-align .notifications-icon {
-        margin: 8px 4px; }
-      .main-header .nav-wrapper .right-align .user-avatar {
-        background-color: grey;
-        width: 40px;
-        height: 40px;
-        display: block;
-        border-radius: 40px;
-        margin: 0px 24px 0px 16px; }
 
+.right-align {
+  float: right;
+  display: flex;
+  align-items: center; }
+  .right-align .add-deal-btn {
+    margin: 0px 16px;
+    padding: 8px 16px;
+    color: #4285f4;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase; }
+    .right-align .add-deal-btn:hover {
+      cursor: pointer; }
+    .right-align .add-deal-btn:active {
+      background-color: rgba(66, 133, 244, 0.2); }
+
+.nav-separator {
+  height: 24px;
+  border-left: 1px solid grey;
+  margin: 0px 8px 0px 8px; }
+
+.calendar-icon {
+  margin: 8px 4px; }
+
+.notifications-icon {
+  margin: 8px 4px; }
+
+.user-avatar {
+  background-color: grey;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 40px;
+  margin: 0px 24px 0px 16px; }
+
+@media (max-width: 880px) {
+  .nav-separator,
+  .calendar-icon,
+  .notifications-icon,
+  .user-avatar {
+    display: none; }
+
+  .user-avatar {
+    display: none; }
+
+  .right-align {
+    margin: 4px 16px;
+    padding: 8px 16px; } }
 .side-bar-modal {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -1487,7 +1534,7 @@ input:checked + .slider:before {
 
 @media (max-width: 1150px) {
   .column {
-    margin: auto 8px;
+    margin: auto 16px;
     font-size: 14px;
     font-weight: 400;
     padding-left: 8px;
@@ -1519,7 +1566,7 @@ input:checked + .slider:before {
     text-align: center; } }
 @media (max-width: 950px) {
   .column {
-    margin: auto 4px;
+    margin: auto 8px;
     font-size: 13px;
     font-weight: 400;
     padding-left: 4px;
@@ -1549,3 +1596,6 @@ input:checked + .slider:before {
   .col-7 {
     width: 30px;
     text-align: center; } }
+@media (max-width: 880px) {
+  .column {
+    margin: auto 16px; } }
